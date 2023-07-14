@@ -72,17 +72,17 @@ class NewArrival extends Component {
                         <div className='section-title text-center mb-55'>
                             <h2> 
                              
-                            <a  className='btn btn-sm ml-2 site-btn' onClick={this.previous} >
+                            <button  className='btn btn-sm ml-2 site-btn' onClick={this.previous} >
                             <i className="fa fa-angle-left"></i>
-                            </a> 
+                            </button> 
 
                                 &nbsp;
                                     New Arrival  
                                 &nbsp;
                                      
-                            <a  className='btn btn-sm ml-2 site-btn' onClick={this.next}>
+                            <button  className='btn btn-sm ml-2 site-btn' onClick={this.next}>
                             <i className="fa fa-angle-right"></i>
-                            </a> 
+                            </button> 
                             
                             
                             </h2>
