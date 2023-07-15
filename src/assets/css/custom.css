@@ -7,6 +7,9 @@
 @import "NavMenuDesktop.css";
 @import "NavMenuMobile.css";
 @import "typo.css";
+@import "megaMenuMobile.css";
+@import "responsive.css";
+@import "megaMenuAll.css";
 
 
 body{

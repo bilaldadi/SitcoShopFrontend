@@ -44,8 +44,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
         
@@ -56,8 +56,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -68,8 +68,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -80,8 +80,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -92,8 +92,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -104,8 +104,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -116,8 +116,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
 
@@ -128,8 +128,8 @@ class MegaMenu extends Component {
             </button>
             <div className='panel'>
                 <ul>
-                    <li className='accordionItem'>  <a>Mans Tshirt 1</a> </li>
-                    <li className='accordionItem'>  <a>Mans Tshirt 2</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 1</a> </li>
+                    <li className='accordionItem'>  <a href="/#" >Mans Tshirt 2</a> </li>
                 </ul>
             </div>
             
