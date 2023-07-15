@@ -8,6 +8,8 @@ import HomeTopMobile from '../components/home/HomeTopMobile'
 import NavMenuDsektop from '../components/common/NavMenuDesktop'
 
 import NavMenuMobile from '../components/common/NavMenuMobile'
+import FooterDesktop from '../components/common/FooterDesktop'
+import FooterMobile from '../components/common/FooterMobile'
 
 
 class HomePage extends Component {
@@ -26,6 +28,12 @@ class HomePage extends Component {
         <NewArrival />
         <Collection />
         <Categories />
+        <div className='Desktop'>
+          <FooterDesktop />
+        </div>
+        <div className='Mobile'>
+          <FooterMobile />
+        </div>
       </Fragment>
     )
   }
