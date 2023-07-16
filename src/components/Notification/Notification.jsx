@@ -11,6 +11,9 @@ function Notification () {
 return (
                <Fragment>
                     <Container className="TopSection">
+                        <div className="section-title text-center mb-55 pt-1">
+                            <h2>Notification List</h2>   
+                        </div>
                         <Row>
                             <Col className=" p-1 " md={6} lg={6} sm={12} xs={12}>
                                 <Card onClick={handleShow} className="notification-card">
