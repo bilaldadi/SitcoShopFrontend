@@ -26,14 +26,14 @@ class FooterDesktop extends Component {
                       <h5 className="footer-menu-title">THE COMPANY</h5>
                       <Link className="footer-link" to="/">About Us</Link><br></br>
                       <Link className="footer-link" to="/">Company Profile</Link><br></br>
-                      <Link className="footer-link" to="/">Contact Us</Link><br></br>
+                      <Link className="footer-link" to="/contact">Contact Us</Link><br></br>
                       </Col>
 
                       <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                       <h5 className="footer-menu-title">MORE INFO</h5>
-                      <Link className="footer-link" to="/">How to Order</Link><br></br>
-                      <Link className="footer-link" to="/">How to Payment</Link><br></br>
-                      <Link className="footer-link" to="/">FAQ</Link><br></br>
+                      <Link className="footer-link" to="/purchase">How to Purchase</Link><br></br>
+                      <Link className="footer-link" to="/privacy">Privecy Policy</Link><br></br>
+                      <Link className="footer-link" to="/refund">Refund Policy</Link><br></br>
                       </Col>
 
                       <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
