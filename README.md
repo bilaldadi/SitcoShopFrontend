@@ -1,4 +1,4 @@
-Test1 This is a Ecommerce project using React & Laravel
+Test2 This is a Ecommerce project using React & Laravel
 
 
 # Getting Started with Create React App
