@@ -10,7 +10,9 @@ import ReactHtmlParser from 'react-html-parser';
      constructor(){
           super();
           this.state={
-               about : ""
+               about : "",
+               loaderDiv :"",
+               mainDiv :"d-none"
           }
      }
 
@@ -19,7 +21,7 @@ import ReactHtmlParser from 'react-html-parser';
                
                if(response.status === 200){
                     let JsonData = (response.data)[0]['about'];
-                    this.setState({about:JsonData});
+                    this.setState({about:JsonData,loaderDiv:'d-none',mainDiv:''});
                }
 
           }).catch()
@@ -33,11 +35,42 @@ import ReactHtmlParser from 'react-html-parser';
                               <Col className="shadow-sm bg-white mt-2" md={12} lg={12} sm={12} xs={12}>
                                    <h4 className="section-title-login">About Us Page </h4>
 
-                                   <p className="section-title-contact">
-                                   
-                                        { ReactHtmlParser(this.state.about) }
-                                        
-                                   </p>
+                                   <div className={this.state.loaderDiv}>
+                                        <div class="ph-col-12">
+                                             
+                                             <div class="ph-row">
+                                                  <div class="ph-col-6 big"></div>
+                                                  <div class="ph-col-6 empty big"></div>
+                                                  
+                                                  
+                                                  <div class="ph-col-4"></div>
+                                                  <div class="ph-col-8 empty"></div>
+
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+                                                  <div class="ph-col-6"></div>
+                                                  <div class="ph-col-6 empty"></div>
+
+                                                  <div class="ph-col-12"></div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div className={this.state.mainDiv}>
+                                        <p className="section-title-contact">
+
+                                             { ReactHtmlParser(this.state.about) }
+                                             
+                                        </p>
+                                   </div>
                
                               </Col>
                          </Row>
