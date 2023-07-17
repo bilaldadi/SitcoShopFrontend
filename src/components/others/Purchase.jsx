@@ -13,7 +13,7 @@ export class Purchase extends Component {
           this.state={
                purchase : "",
                loaderDiv:"",
-               mainDiv:"d-block"
+               mainDiv:"d-none"
           }
      }
 
@@ -31,7 +31,7 @@ export class Purchase extends Component {
 
                     }else{
                          toast.error("Something Went Wrong !",{ position: "bottom-center"});
-
+                         
                     }
      
                }).catch(error=>{
@@ -53,7 +53,7 @@ export class Purchase extends Component {
                               <Col className="shadow-sm bg-white mt-2" md={12} lg={12} sm={12} xs={12}>
                                    <h4 className="section-title-login">Purchase Page </h4>
 
-                                   <div className={this.state.loaderDiv}>
+                                   <div className={this.state.loaderDiv} class="ph-item">
                                         <div class="ph-col-12">
                                              
                                              <div class="ph-row">
