@@ -7,6 +7,8 @@ class AppUrl  {
     static ContactForm = this.BaseUrl +"/sendcontactform"
 
     static AllSiteInfo = this.BaseUrl +"/siteinfo"
+
+    static Categories = this.BaseUrl +"/allcategories"
 }
 
 export default AppUrl

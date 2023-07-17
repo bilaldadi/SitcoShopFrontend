@@ -2,7 +2,31 @@ import React, { Component, Fragment } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import MegaMenu from './MegaMenu'
 import HomeSlider from './HomeSlider'
+import AppUrl from '../../api/AppUrl';
+import axios from 'axios'
+
 class HomeTop extends Component {
+
+  constructor(){
+    super();
+    this.state={
+
+      MenuData:[],
+
+    }
+  }
+
+  componentDidMount(){
+      
+      axios.get(AppUrl.Categories).then(response=>{
+        if(response.status === 200){
+          this.setState({MenuData:response.data});
+        }
+      }).catch(error=>{})
+  }
+
+
+
   render() {
     return (
       <Fragment>
@@ -10,7 +34,7 @@ class HomeTop extends Component {
             <Row>
                 <Col lg={3} md={3} sm={12}>
 
-                    <MegaMenu/>
+                    <MegaMenu data={this.state.MenuData}/>
 
                 </Col>
 
