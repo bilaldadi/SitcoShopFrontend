@@ -34,6 +34,8 @@ class Privacy extends Component {
                          toast.error("Something Went Wrong !",{ position: "bottom-center"});
                     });
 
+               }else{
+                    this.setState({privacy:siteInfoPrivacy,loaderDiv:'d-none',mainDiv:''});
                }
 
               

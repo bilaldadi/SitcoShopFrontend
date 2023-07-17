@@ -34,6 +34,8 @@ class Refund extends Component {
                          toast.error("Something Went Wrong !",{ position: "bottom-center"});
                     });
 
+               }else{
+                    this.setState({refund:siteInfoRefund,loaderDiv:'d-none',mainDiv:''});
                }
 
               

@@ -34,8 +34,10 @@ import 'react-toastify/dist/ReactToastify.css';
      
                }).catch(error=>{
                     toast.error("Something Went Wrong !",{ position: "bottom-center"});
-               })
+               });
 
+          }else{
+               this.setState({about:siteInfoAbout,loaderDiv:'d-none',mainDiv:''});
           }
 
           
