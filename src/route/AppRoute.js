@@ -10,6 +10,7 @@ import ProductDetailsPage from '../pages/ProductDetailsPage'
 import NotificationPage from '../pages/NotificationPage'
 import FavouritePage from '../pages/FavouritePage'
 import CartPage from '../pages/CartPage'
+import AboutPage from '../pages/AboutPage'
 
 
 
@@ -20,7 +21,10 @@ class AppRoute extends Component {
         <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={UserLoginPage} />
+
             <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/aboutus" component={AboutPage} />
+
 
             <Route exact path="/purchase" component={PurchasePage} />
             <Route exact path="/privacy" component={PrivacyPage} />

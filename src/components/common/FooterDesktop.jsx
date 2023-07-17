@@ -24,7 +24,7 @@ class FooterDesktop extends Component {
 
                       <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                       <h5 className="footer-menu-title">THE COMPANY</h5>
-                      <Link className="footer-link" to="/">About Us</Link><br></br>
+                      <Link className="footer-link" to="/aboutus">About Us</Link><br></br>
                       <Link className="footer-link" to="/">Company Profile</Link><br></br>
                       <Link className="footer-link" to="/contact">Contact Us</Link><br></br>
                       </Col>
