@@ -19,12 +19,7 @@
     font-weight: 400;
     background-color: #051b35;
 }
-.accordion:after {
-    content: '\276F';
-    color: #c2c2c2;
-    float: right;
-    margin-left: 5px;
-}
+
 .active:after,hover {
     color: #ffffff;
     content: "\276E";
@@ -41,7 +36,7 @@
     direction:rtl;
     font-family: 'Roboto', sans-serif !important;
     font-weight: 300 !important;
-    height: 380px;
+    height: 50px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;

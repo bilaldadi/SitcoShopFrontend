@@ -4,16 +4,32 @@ import Logo from '../../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
 import MegaMenuAll from '../home/MegaMenuAll';
 import Bars from '../../assets/images/bars.png';
+import MegaMenu from '../home/MegaMenu';
+import axios from 'axios';
+import AppUrl from '../../api/AppUrl';
 
 class NavMenuDesktop extends Component {
 
-  constructor(){
+  constructor(props){
     super();
     this.state={
       SideNavState:"sideNavClose",
-      ContentOverState:"ContentOverlayClose"
+      ContentOverState:"ContentOverlayClose",
+      MenuData:[],
+
+ 
     }
   }
+
+
+  componentDidMount(){
+      
+    axios.get(AppUrl.Categories).then(response=>{
+      if(response.status === 200){
+        this.setState({MenuData:response.data});
+      }
+    }).catch(error=>{})
+}
 
   MenuBarClickHandler=()=>{
     this.SideNavOpenClose();
@@ -48,13 +64,13 @@ class NavMenuDesktop extends Component {
 
               <Row>
 
-                <Col lg={4} md={4} sm={12} xs={12}>
-                  <img alt='' onClick={this.MenuBarClickHandler} className="bar-img" src={Bars} />
+                <Col className='text-center' lg={2} md={4} sm={12} xs={12}>
+                  
                   <Link to='/'> <img className='nav-logo' src={Logo} alt=''/> </Link>
 
                 </Col>
 
-                <Col className='p-1 mt-1' lg={4} md={4} sm={12} xs={12}>
+                <Col className='p-1 mt-1 ' lg={6} md={4} sm={12} xs={12}>
                   <div className='input-group w-100'>
                     <input type="text" className='form-control' placeholder='Search for products, brands and more' />
                     <Button type='button' className='btn btn-warning'><i className='fa fa-search'></i></Button>
@@ -62,7 +78,7 @@ class NavMenuDesktop extends Component {
                 </Col>
 
               
-                <Col className="p-1 mt-1" lg={4} md={4} sm={12} xs={12}>
+                <Col className="p-1 mt-1 text-center" lg={4} md={4} sm={12} xs={12}>
                       <Link to="/favourite" className="btn">
                         <i className="fa h4 fa-heart"></i>
                         <sup>
@@ -87,8 +103,10 @@ class NavMenuDesktop extends Component {
                 </Col>
 
               </Row>
-              
+
             </Container>
+
+            
 
             <div className={this.state.SideNavState}>
                 <hr className="w-80" />
@@ -102,7 +120,30 @@ class NavMenuDesktop extends Component {
           </div>
 
           </Navbar>
+
+          
       </div>
+
+      <Container  fluid={true} >
+
+            <Row>
+
+              <Col  className='bg-black p-0 m-0'  lg={2}>
+
+                <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
+                  <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
+                </button>
+
+              </Col>
+
+              <Col className='p-0 m-0'>
+                <MegaMenu data={this.state.MenuData} />
+              </Col>
+                
+              
+            </Row>
+            
+      </Container>
      
       </Fragment>
      

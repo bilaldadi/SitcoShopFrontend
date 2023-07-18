@@ -30,3 +30,21 @@ body{
     height: 110px;
     margin-left: 80px;
 }
+
+.container_subNav {
+  
+    display: inline-block;
+   
+  }
+  
+  .inner_subNav {
+    
+    display: inline-block;
+   
+  }
+  
+  .child_subNav {
+   
+    display: inline-block;
+   
+  }
