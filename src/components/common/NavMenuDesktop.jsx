@@ -47,6 +47,7 @@ class NavMenuDesktop extends Component {
             <Container fluid={"true"} className=' fixed-top shadow-sm p-2 mb-0 bg-white'>
 
               <Row>
+
                 <Col lg={4} md={4} sm={12} xs={12}>
                   <img alt='' onClick={this.MenuBarClickHandler} className="bar-img" src={Bars} />
                   <Link to='/'> <img className='nav-logo' src={Logo} alt=''/> </Link>
@@ -90,13 +91,13 @@ class NavMenuDesktop extends Component {
             </Container>
 
             <div className={this.state.SideNavState}>
-              <hr className="w-80" />
-              <div className="list-group">
-                <MegaMenuAll/>
-              </div> 
-          </div>
+                <hr className="w-80" />
+                <div className="list-group">
+                  <MegaMenuAll/>
+                </div> 
+            </div>
 
-             <div className={this.state.ContentOverState} onClick={this.ContentOverlayClickHandler}>
+          <div className={this.state.ContentOverState} onClick={this.ContentOverlayClickHandler}>
 
           </div>
 
