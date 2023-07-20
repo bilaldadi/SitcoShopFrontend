@@ -2,53 +2,53 @@ import React, { Component, Fragment } from 'react'
 import {Navbar,Container, Row, Col, Button} from 'react-bootstrap';
 import Logo from '../../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
-import MegaMenuAll from '../home/MegaMenuAll';
-import Bars from '../../assets/images/bars.png';
-import MegaMenu from '../home/MegaMenu';
-import axios from 'axios';
-import AppUrl from '../../api/AppUrl';
+// import MegaMenuAll from '../home/MegaMenuAll';
+// import Bars from '../../assets/images/bars.png';
+// import MegaMenu from '../home/MegaMenu';
+// import axios from 'axios';
+// import AppUrl from '../../api/AppUrl';
 
 class NavMenuDesktop extends Component {
 
-  constructor(props){
-    super();
-    this.state={
-      SideNavState:"sideNavClose",
-      ContentOverState:"ContentOverlayClose",
-      MenuData:[],
+//   constructor(props){
+//     super();
+//     this.state={
+//       SideNavState:"sideNavClose",
+//       ContentOverState:"ContentOverlayClose",
+//       MenuData:[],
 
  
-    }
-  }
+//     }
+//   }
 
 
-  componentDidMount(){
+//   componentDidMount(){
       
-    axios.get(AppUrl.Categories).then(response=>{
-      if(response.status === 200){
-        this.setState({MenuData:response.data});
-      }
-    }).catch(error=>{})
-}
+//     axios.get(AppUrl.Categories).then(response=>{
+//       if(response.status === 200){
+//         this.setState({MenuData:response.data});
+//       }
+//     }).catch(error=>{})
+// }
 
-  MenuBarClickHandler=()=>{
-    this.SideNavOpenClose();
-  }
+//   MenuBarClickHandler=()=>{
+//     this.SideNavOpenClose();
+//   }
 
-  ContentOverlayClickHandler=()=>{
-    this.SideNavOpenClose();
-  }
+//   ContentOverlayClickHandler=()=>{
+//     this.SideNavOpenClose();
+//   }
 
-  SideNavOpenClose=()=>{
-    let SideNavState=this.state.SideNavState;
-    let ContentOverState=this.state.ContentOverState;
-    if(SideNavState==="sideNavOpen" && ContentOverState==="ContentOverlayOpen"){
-      this.setState({SideNavState:"sideNavClose",ContentOverState:"ContentOverlayClose"});
-    }
-    else{
-      this.setState({SideNavState:"sideNavOpen",ContentOverState:"ContentOverlayOpen"});
-    }
-  }
+//   SideNavOpenClose=()=>{
+//     let SideNavState=this.state.SideNavState;
+//     let ContentOverState=this.state.ContentOverState;
+//     if(SideNavState==="sideNavOpen" && ContentOverState==="ContentOverlayOpen"){
+//       this.setState({SideNavState:"sideNavClose",ContentOverState:"ContentOverlayClose"});
+//     }
+//     else{
+//       this.setState({SideNavState:"sideNavOpen",ContentOverState:"ContentOverlayOpen"});
+//     }
+//   }
 
 
 
@@ -108,23 +108,23 @@ class NavMenuDesktop extends Component {
 
             
 
-            <div className={this.state.SideNavState}>
+            {/* <div className={this.state.SideNavState}>
                 <hr className="w-80" />
                 <div className="list-group">
                   <MegaMenuAll/>
                 </div> 
-            </div>
+            </div> */}
 
-          <div className={this.state.ContentOverState} onClick={this.ContentOverlayClickHandler}>
+          {/* <div className={this.state.ContentOverState} onClick={this.ContentOverlayClickHandler}>
 
-          </div>
+          </div> */}
 
           </Navbar>
 
           
       </div>
 
-      <Container  fluid={true} >
+      {/* <Container  fluid={true} >
 
             <Row>
 
@@ -143,7 +143,7 @@ class NavMenuDesktop extends Component {
               
             </Row>
             
-      </Container>
+      </Container> */}
      
       </Fragment>
      
