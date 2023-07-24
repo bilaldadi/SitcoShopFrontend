@@ -1,9 +1,52 @@
+import axios from 'axios';
 import React, { Component, Fragment } from 'react'
 import { Col, Container, Row, Card } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import AppUrl from '../../api/AppUrl';
 
 class FeaturedProducts extends Component {
+
+    constructor(){
+        super();
+        this.state={
+            ProductData:[]
+        }
+    }
+
+    componentDidMount(){
+        axios.get(AppUrl.ProductListByRemark("FEATURED")).then(response=>{
+            this.setState({ProductData:response.data});
+        }).catch(error=>{
+            
+        });
+    }
+
+
+
   render() {
+
+    const ProductList = this.state.ProductData;
+    const MyView = ProductList.map((ProductList,i)=>{
+        return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
+                    <Link to="/#">
+
+                        <Card className="image-box card">
+                                <img alt='' className="center" src={ProductList.image} />   
+                            <Card.Body> 
+                                <p className="product-name-on-card">{ProductList.title}</p>
+                                <p className="product-price-on-card">{ProductList.price}</p>
+                            </Card.Body>
+                        </Card>
+                        
+                    </Link>
+
+                </Col>
+
+    })
+
+
+
+
     return (
         <Fragment>
                 <Container className='text-center' fluid={true}>
@@ -12,80 +55,8 @@ class FeaturedProducts extends Component {
                             <p>Check out our new products that you may like</p>
                         </div>
                     <Row>
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Link to="/productdetails">
+                       {MyView}
 
-                                <Card className="image-box card">
-                                        <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                    <Card.Body> 
-                                        <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                        <p className="product-price-on-card">Price : $120</p>
-                                    </Card.Body>
-                                </Card>
-                                
-                            </Link>
-                    
-                        </Col>
-
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                        
-                            <Card className="image-box card">
-                                    <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                <Card.Body> 
-                                    <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                    <p className="product-price-on-card">Price : $120</p>
-                                </Card.Body>
-                            </Card>
-                    
-                        </Col>
-
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                        
-                            <Card className="image-box card">
-                                    <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                <Card.Body> 
-                                    <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                    <p className="product-price-on-card">Price : $120</p>
-                                </Card.Body>
-                            </Card>
-                    
-                        </Col>
-
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                        
-                            <Card className="image-box card">
-                                    <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                <Card.Body> 
-                                    <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                    <p className="product-price-on-card">Price : $120</p>
-                                </Card.Body>
-                            </Card>
-                    
-                        </Col>
-
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                        
-                            <Card className="image-box card">
-                                    <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                <Card.Body> 
-                                    <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                    <p className="product-price-on-card">Price : $120</p>
-                                </Card.Body>
-                            </Card>
-                    
-                        </Col>
-
-                        <Col className='p-1' key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                        
-                            <Card className="image-box card">
-                                    <img alt='' className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
-                                <Card.Body> 
-                                    <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-                                    <p className="product-price-on-card">Price : $120</p>
-                                </Card.Body>
-                            </Card>
-                    
-                        </Col>
                     </Row>
                 </Container>
         </Fragment>
