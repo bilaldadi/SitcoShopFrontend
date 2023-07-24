@@ -27,20 +27,40 @@ class FeaturedProducts extends Component {
 
     const ProductList = this.state.ProductData;
     const MyView = ProductList.map((ProductList,i)=>{
-        return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
-                    <Link to="/#">
+        if(ProductList.special_price === "NA") {
 
-                        <Card className="image-box card">
-                                <img alt='' className="center" src={ProductList.image} />   
-                            <Card.Body> 
-                                <p className="product-name-on-card">{ProductList.title}</p>
-                                <p className="product-price-on-card">{ProductList.price}</p>
-                            </Card.Body>
-                        </Card>
-                        
-                    </Link>
+            return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
+                        <Link to="/ProductDetails">
 
-                </Col>
+                            <Card className="image-box card">
+                                    <img alt='' className="center" src={ProductList.image} />   
+                                <Card.Body> 
+                                    <p className="product-name-on-card">{ProductList.title}</p>
+                                    <p className="product-price-on-card">Price:{ProductList.price}</p>
+                                </Card.Body>
+                            </Card>
+                            
+                        </Link>
+
+                    </Col>
+                }else {
+                    return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
+                                <Link to="/ProductDetails">
+
+                                    <Card className="image-box card">
+                                            <img alt='' className="center" src={ProductList.image} />   
+                                        <Card.Body> 
+                                            <p className="product-name-on-card">{ProductList.title}</p>
+                                            <p className="product-price-on-card">Price: <strike className="text-secondary">{ProductList.price}</strike>  {ProductList.special_price} </p>
+                                        </Card.Body>
+                                    </Card>
+                                    
+                                </Link>
+
+                            </Col>
+
+                }
+        
 
     })
 
