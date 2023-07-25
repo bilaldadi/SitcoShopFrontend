@@ -2,11 +2,11 @@
     width: 100% !important;
     text-decoration: none;
     border: none !important;
-    border-radius: 0% !important;
+    border-radius: 5% !important;
     box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)
 }
 .card:hover {
-    border-radius: 0% !important;
+   
     text-decoration: none;
     box-shadow: 0 0 12px 0 #3C486B
 }
