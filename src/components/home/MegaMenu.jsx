@@ -15,7 +15,7 @@ class MegaMenu extends Component {
     const CatList = this.props.data;
     const CatListView = CatList.map((CatList,i)=>{
 
-        return <div className='container_subNav' >
+        return <div key={i.toString()} className='container_subNav' >
                     <div className='inner_subNav' key={i.toString()}>
 
                         <button className="accordion child_subNav">

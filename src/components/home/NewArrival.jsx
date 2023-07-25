@@ -79,7 +79,7 @@ class NewArrival extends Component {
 
       const NewArrivalList = this.state.NewArrivalData;
       const MyView = NewArrivalList.map((NewArrivalList,i)=>{
-        return  <div>
+        return  <div key={i.toString()} >
                     <Card className="image-box card">
                             <img className="center" alt='' src={NewArrivalList.image}/>   
                         <Card.Body> 
