@@ -54,7 +54,7 @@ class FooterDesktop extends Component {
                 <Row className="px-0 my-5">
                       <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                           <h5 className="footer-menu-title">OFFICE ADDRESS</h5>
-                          <p>
+                          <p className="text-white">
                             {this.state.address}
                           </p>
                           <h5 className="footer-menu-title">SOCIAL LINK</h5>
