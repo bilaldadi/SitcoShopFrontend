@@ -60,7 +60,7 @@ class NavMenuDesktop extends Component {
       <Fragment>
       <div className='TopSectionDown'>
           <Navbar className='navbar' fixed={"top"} expand="lg">
-            <Container fluid={"true"} className=' fixed-top shadow-sm p-2 mb-0 bg-white'>
+            <Container fluid={"true"} className=' main-color fixed-top shadow-sm p-2 mb-0'>
 
               <Row>
 

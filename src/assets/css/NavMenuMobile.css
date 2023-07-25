@@ -1,29 +1,31 @@
 .sideNavOpen {
     height: 100%;
     width: 240px;
-    margin-top: 55px;
+    margin-top: 72px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2000;
     overflow-x: hidden;
     font-size: 16px;
-    padding-top: 40px;
-    transition: 0.1s;
-    background-color: #ffffff;
-    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1)
+    transition: all 0.5s ;
+    -webkit-transition: all 0.25s;
+    background-color: #F0F0F0;
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+    
+
 }
 .sideNavClose {
     height: 100%;
     width: 0px;
-    position: fixed;
+    position: absolute;
     top: 0;
     font-size: 20px;
-    left: 0;
+    left: -240px;
     z-index: 10;
     overflow-x: hidden;
-    transition: 0.1s;
-    background-color: #161616;
+    transition: 0.25s;
+    background-color: #F0F0F0;
     box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
 }
 .ContentOverlayOpen {

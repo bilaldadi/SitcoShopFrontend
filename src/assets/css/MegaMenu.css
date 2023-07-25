@@ -1,5 +1,5 @@
 .accordion {
-    background-color: #f8f8f8;
+    background-color: #F0F0F0;
     color: #444;
     cursor: pointer;
     padding: 7px;
@@ -10,14 +10,13 @@
     outline: none;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
-    transition: 0.4s;
+    transition: 0.5s;
     overflow: paged-y;
     box-shadow: 0 0 2px 0 rgba(57, 78, 234, 0.1)
 }
 .active, .accordion:hover {
     color: #ffffff;
-    font-weight: 400;
-    background-color: #051b35;
+    background-color: #3C486B;
 }
 
 .active:after,hover {

@@ -58,25 +58,26 @@ class HomeTop extends Component {
 
 <Container  fluid={true} >
 
-<Row>
+    <Row>
 
-  <Col  className='bg-black p-0 m-0'  lg={2}>
+        <Col  className='p-0 m-0'  lg={2}>
 
-    <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
-      <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
-    </button>
+            <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
+              <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
+            </button>
 
-  </Col>
+        </Col>
 
-  <Col className='p-0 m-0'>
-    <MegaMenu data={this.state.MenuData} />
-  </Col>
-    
-  
-</Row>
+        <Col className='p-0 m-0'>
+            <MegaMenu data={this.state.MenuData} />
+        </Col>
+          
+      
+    </Row>
 
 </Container>
-        <Container className=' p-0 m-0 overflow-hidden' fluid={true}>
+
+        <Container className='p-0 m-0 overflow-hidden' fluid={true}>
             <Row> 
 
 
