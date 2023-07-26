@@ -18,6 +18,7 @@
 .sideNavClose {
     height: 100%;
     width: 0px;
+    margin-top: 72px;
     position: absolute;
     top: 0;
     font-size: 20px;

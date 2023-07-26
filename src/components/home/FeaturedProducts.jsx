@@ -29,7 +29,7 @@ class FeaturedProducts extends Component {
     const MyView = ProductList.map((ProductList,i)=>{
         if(ProductList.special_price === "NA") {
 
-            return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
+            return  <Col key={i.toString()} className='p-2'  xl={2} lg={2} md={2} sm={4} xs={6}>
                         <Link to="/ProductDetails">
 
                             <Card className="image-box card">
@@ -44,10 +44,10 @@ class FeaturedProducts extends Component {
 
                     </Col>
                 }else {
-                    return  <Col className='p-1' key={i.toString()} xl={2} lg={2} md={2} sm={4} xs={6}>
+                    return  <Col key={i.toString()} className='p-2'  xl={2} lg={2} md={2} sm={4} xs={6}>
                                 <Link to="/ProductDetails">
 
-                                    <Card className="image-box card">
+                                    <Card  className="image-box card">
                                             <img alt='' className="center" src={ProductList.image} />   
                                         <Card.Body> 
                                             <p className="product-name-on-card">{ProductList.title}</p>
@@ -69,14 +69,15 @@ class FeaturedProducts extends Component {
 
     return (
         <Fragment>
-                <Container >
-                    <Row className='text-center' fluid={true} >
+                <Container fluid={true} >
+                    <Row className='text-center'  >
                             <div className='section-title text-center mb-55'>
                                 <h2>Featured Products</h2>
                                 <p>Check out our new products that you may like</p>
                             </div>
                     </Row>
                     <Row>
+
                        {MyView}
 
                     </Row>

@@ -90,7 +90,6 @@ class HomeTop extends Component {
         </Container>
 
         <div className={this.state.SideNavState}>
-                <hr className="w-80" />
                 <div className="list-group">
                   <MegaMenuAll/>
                 </div> 

@@ -79,7 +79,7 @@ class NewArrival extends Component {
 
       const NewArrivalList = this.state.NewArrivalData;
       const MyView = NewArrivalList.map((NewArrivalList,i)=>{
-        return  <div key={i.toString()} >
+        return  <div className='p-2' key={i.toString()} >
                     <Card className="image-box card">
                             <img className="center" alt='' src={NewArrivalList.image}/>   
                         <Card.Body> 
@@ -93,34 +93,36 @@ class NewArrival extends Component {
 
     return (
       <Fragment>
-        <Container className='text-center' fluid={true}>
-                        <div className='section-title text-center mb-55'>
-                            <h2> 
-                             
-                            <button  className='btn btn-sm ml-2 site-btn' onClick={this.previous} >
-                            <i className="fa fa-angle-left"></i>
-                            </button> 
+        <Container fluid={true} className='text-center'>
+          <Row >
+                          <div className='section-title text-center mb-55'>
+                              <h2> 
+                              
+                              <button  className='btn btn-sm ml-2 site-btn' onClick={this.previous} >
+                              <i className="fa fa-angle-left"></i>
+                              </button> 
 
-                                &nbsp;
-                                    New Arrival  
-                                &nbsp;
-                                     
-                            <button  className='btn btn-sm ml-2 site-btn' onClick={this.next}>
-                            <i className="fa fa-angle-right"></i>
-                            </button> 
-                            
-                            
-                            </h2>
-                            
-                            <p>Check out our new products that you may like</p>
-                        </div>
-            <Row>
-                <Slider ref={c=>(this.slider=c)} {...settings}>
+                                  &nbsp;
+                                      New Arrival  
+                                  &nbsp;
+                                      
+                              <button  className='btn btn-sm ml-2 site-btn' onClick={this.next}>
+                              <i className="fa fa-angle-right"></i>
+                              </button> 
+                              
+                              
+                              </h2>
+                              
+                              <p>Check out our new products that you may like</p>
+                          </div>
+              </Row>
+              <Row>
+                  <Slider ref={c=>(this.slider=c)} {...settings}>
 
-                   {MyView}
-                  
-                </Slider>
-          </Row>
+                    {MyView}
+                    
+                  </Slider>
+            </Row>
 
         </Container>
       </Fragment>
