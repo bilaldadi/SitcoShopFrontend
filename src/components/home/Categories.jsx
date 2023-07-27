@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component, Fragment } from 'react'
 import { Col, Container, Row, Card } from 'react-bootstrap'
 import AppUrl from '../../api/AppUrl';
+import { Link } from 'react-router-dom';
 
 class Categories extends Component {
 
@@ -25,12 +26,14 @@ class Categories extends Component {
     const myview = CatList.map((CatList,i)=>{
 
         return  <Col className='p-1' key={i.toString()} xl={3} lg={3} md={3} sm={6} xs={6}>
+                    <Link to={"categoryproducts/"+ CatList.category_name} >
                         <Card className="h-100 w-100 text-center">
                             <Card.Body> 
                                 <img alt='' className="center" src={CatList.category_image}/>   
                                 <h5 className='category-name'>{CatList.category_name}</h5>
                             </Card.Body>
                         </Card>
+                    </Link>
                 </Col>
     })
 
