@@ -21,7 +21,6 @@ function Collection() {
        fetchData();
     }, []);
 
-
     const ProductList = ProductData;
     const MyView = ProductList.map((ProductList,i)=>{
 
@@ -41,17 +40,18 @@ function Collection() {
     });
   
     return (
-        
+
      <Fragment>
         <Container className='text-center' fluid={true}>
                         <div className='section-title text-center mb-55'>
                             <h2>Products Collection</h2>
                             <p>Check out our new products that you may like</p>
                         </div>
+
                 <Row>
                    {MyView}
-                    
                 </Row>
+
         </Container>
         <ToastContainer />
      </Fragment>

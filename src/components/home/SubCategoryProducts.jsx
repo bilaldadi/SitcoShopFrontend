@@ -1,14 +1,11 @@
 import React, {Fragment } from 'react'
 import { Col, Container, Row, Card} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
-
-function CategoryProducts(props) {
-
-    
-    
-
-
+function SubCategoryProducts (props) {
+ 
     const category =props.category; 
+    const subcategory =props.subcategory; 
     const ProductList = props.ProductData;
     const MyView = ProductList.map((ProductList,i)=>{
 
@@ -32,8 +29,8 @@ function CategoryProducts(props) {
      <Fragment>
         <Container className='text-center p-1'>
                         <div className='section-title text-center mb-55'>
-                            <h2>{category}</h2>
-                            <p>This is out Latest Collection of {category}</p>
+                            <h2>{subcategory}</h2>
+                            <p>This is out Latest Collection of <Link to={"../../categoryproducts/"+category}> {category} </Link> &rarr; {subcategory}</p>
                         </div>
                 <Row>
                    {MyView}
@@ -46,4 +43,5 @@ function CategoryProducts(props) {
   }
 
 
-export default CategoryProducts
+
+export default SubCategoryProducts

@@ -12,6 +12,7 @@ import FavouritePage from '../pages/FavouritePage'
 import CartPage from '../pages/CartPage'
 import AboutPage from '../pages/AboutPage'
 import ProductCategoryPage from '../pages/ProductCategoryPage'
+import SubCategoryProductspage from '../pages/SubCategoryProductspage'
 
 
 
@@ -38,6 +39,7 @@ class AppRoute extends Component {
             <Route exact path="/cart" component={CartPage} />
 
             <Route exact path="/categoryproducts/:category" component={ProductCategoryPage} />
+            <Route exact path="/subcategoryproducts/:category/:subcategory" component={SubCategoryProductspage} />
 
         </Switch>
       </Fragment>

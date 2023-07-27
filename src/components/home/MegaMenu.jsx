@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 
 class MegaMenu extends Component {
@@ -16,6 +17,7 @@ class MegaMenu extends Component {
     const CatListView = CatList.map((CatList,i)=>{
 
         return <div key={i.toString()} className='container_subNav' >
+                  <Link to={"categoryproducts/"+ CatList.category_name} >
                     <div className='inner_subNav' key={i.toString()}>
 
                         <button className="accordion child_subNav">
@@ -24,6 +26,7 @@ class MegaMenu extends Component {
                         </button>
 
                     </div>
+                  </Link>
                </div>
 
     });
