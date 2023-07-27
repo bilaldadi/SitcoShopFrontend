@@ -19,7 +19,7 @@ class MegaMenu extends Component {
                     <div className='inner_subNav' key={i.toString()}>
 
                         <button className="accordion child_subNav">
-                        <img alt='' className='accordionMenuIcon' src={CatList.category_image} />
+                        {/* <img alt='' className='accordionMenuIcon' src={CatList.category_image} /> */}
                         &nbsp; {CatList.category_name}
                         </button>
 
