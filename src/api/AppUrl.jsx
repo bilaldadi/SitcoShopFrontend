@@ -22,6 +22,8 @@ class AppUrl  {
         return this.BaseUrl +"/productlistbysubcategory/"+category+"/"+subcategory
     }
 
+    static HomeSlider = this.BaseUrl +"/homesliderimages"
+
     
 }
 

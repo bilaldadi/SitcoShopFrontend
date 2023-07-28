@@ -9,12 +9,13 @@ import MegaMenuAll from '../home/MegaMenuAll';
 
 class HomeTop extends Component {
 
-  constructor(props){
+  constructor(){
     super();
     this.state={
       SideNavState:"sideNavClose",
       ContentOverState:"ContentOverlayClose",
       MenuData:[],
+      SliderData:[]
 
  
     }
@@ -28,6 +29,10 @@ class HomeTop extends Component {
         this.setState({MenuData:response.data});
       }
     }).catch(error=>{})
+
+    axios.get(AppUrl.HomeSlider).then(response=>{
+      this.setState({SliderData:response.data});
+    }).catch(error=>{});
 }
 
   MenuBarClickHandler=()=>{
@@ -53,47 +58,48 @@ class HomeTop extends Component {
 
 
   render() {
+
     return (
       <Fragment>
 
-<Container  fluid={true} >
+            <Container  fluid={true} >
 
-    <Row>
+                <Row>
 
-        <Col  className='p-0 m-0'  lg={2}>
+                    <Col  className='p-0 m-0'  lg={2}>
 
-            <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
-              <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
-            </button>
+                        <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
+                          <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
+                        </button>
 
-        </Col>
+                    </Col>
 
-        <Col className='p-0 m-0'>
-            <MegaMenu data={this.state.MenuData} />
-        </Col>
-          
-      
-    </Row>
+                    <Col className='p-0 m-0'>
+                        <MegaMenu data={this.state.MenuData} />
+                    </Col>
+                      
+                  
+                </Row>
 
-</Container>
+            </Container>
 
-        <Container className='p-0 m-0 overflow-hidden' fluid={true}>
-            <Row> 
+            <Container className='p-0 m-0 overflow-hidden' fluid={true}>
+                <Row> 
 
 
-                <Col lg={12} md={12} sm={12}>
+                    <Col lg={12} md={12} sm={12}>
 
-                   <HomeSlider/>
+                      <HomeSlider SliderData={this.state.SliderData}/>
 
-                </Col>
-            </Row>
-        </Container>
+                    </Col>
+                </Row>
+            </Container>
 
-        <div className={this.state.SideNavState}>
-                <div className="list-group">
-                  <MegaMenuAll/>
-                </div> 
-        </div>
+            <div className={this.state.SideNavState}>
+                    <div className="list-group">
+                      <MegaMenuAll/>
+                    </div> 
+            </div>
 
             <div className={this.state.ContentOverState} onClick={this.ContentOverlayClickHandler}>
 

@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Slider1 from '../../assets/images/slider1.png';
-import Slider2 from '../../assets/images/slider2.png';
-import Slider3 from '../../assets/images/slider3.png';
 
 
 class HomeSlider extends Component {
+
   render() {
+
+    const SliderList = this.props.SliderData;
+    const MyView = SliderList.map((SliderList,i)=>{
+      return <div key={i.toString()}>
+                <img alt='' className="slider-img" src={SliderList.slider_image} />
+             </div>
+    });
 
     var settings = {
         dots: true,
@@ -52,15 +57,8 @@ class HomeSlider extends Component {
         <div>
 
                 <Slider {...settings}>
-                        <div>
-                        <img alt='' className="slider-img" src={Slider1} />
-                        </div>
-                        <div>
-                        <img alt='' className="slider-img" src={Slider2} />
-                        </div>
-                        <div>
-                        <img alt='' className="slider-img" src={Slider3} />
-                        </div>
+
+                        {MyView}
 
                         </Slider>
 
