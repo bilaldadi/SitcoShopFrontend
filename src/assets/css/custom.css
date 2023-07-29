@@ -37,18 +37,18 @@ body{
 
 .container_subNav {
   
-    display: inline-block;
-   
+  text-align: center;
+  display: inline-block;
   }
-  
-  .inner_subNav {
+
+  .down_cat{
+    width: 110px;
+    height: 140px;
+  }
+
+  .down_cat:hover{
+    box-shadow: #3C486B 0px 0px 5px 0px;
+    border-radius: 5px;
     
-    display: inline-block;
-   
   }
   
-  .child_subNav {
-   
-    display: inline-block;
-   
-  }

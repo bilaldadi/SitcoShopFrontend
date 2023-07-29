@@ -4,7 +4,7 @@
     cursor: pointer;
     padding: 7px;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px  #ddd;
     font-size: 14px;
     text-align: left;
     outline: none;
@@ -72,4 +72,21 @@
 }
 .accordionItem:hover{
     text-decoration: none;
+}
+
+.topmenuimg{
+    width: 80px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+.topmenuimg:hover{
+    width: 80px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: #3C486B 0px 0px 5px 0px;
+    border-radius: 5px;
 }

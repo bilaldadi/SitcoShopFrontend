@@ -68,7 +68,7 @@ class HomeTop extends Component {
 
                     <Col  className='p-0 m-0'  lg={2}>
 
-                        <button onClick={this.MenuBarClickHandler} className='accordion child_subNav'>
+                        <button onClick={this.MenuBarClickHandler} className=' h-100 text-center accordion'>
                           <img alt=''  className="bar-img"   src={Bars}  /> &nbsp; All Categories
                         </button>
 

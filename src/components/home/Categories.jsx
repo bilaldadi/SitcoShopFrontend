@@ -25,14 +25,14 @@ class Categories extends Component {
 
     const myview = CatList.map((CatList,i)=>{
 
-        return  <Col className='p-1' key={i.toString()} xl={3} lg={3} md={3} sm={6} xs={6}>
+        return  <Col className='p-2' key={i.toString()} xl={3} lg={3} md={3} sm={6} xs={6}>
                     <Link to={"categoryproducts/"+ CatList.category_name} >
-                        <Card className="h-100 w-100 text-center">
+                        {/* <Card className="text-center home_categories">
                             <Card.Body> 
-                                <img alt='' className="center" src={CatList.category_image}/>   
-                                <h5 className='category-name'>{CatList.category_name}</h5>
+                                <img alt='' className="center" src={CatList.category_image}/>
                             </Card.Body>
-                        </Card>
+                        </Card> */}
+                        <img alt='' className="center down_cat" src={CatList.category_image}/>
                     </Link>
                 </Col>
     })
@@ -40,7 +40,7 @@ class Categories extends Component {
 
     return (
         <Fragment>
-                <Container className='text-center' fluid={true}>
+                <Container className='text-center'>
                             <div className='section-title text-center mb-55'>
                                         <h2>Categories</h2>
                                         <p>Check out our new products that you may like</p>
@@ -51,10 +51,6 @@ class Categories extends Component {
                                    {myview}
                                 </Row>
                             </Col>
-
-                            
-
-
                         </Row>
 
                 </Container>

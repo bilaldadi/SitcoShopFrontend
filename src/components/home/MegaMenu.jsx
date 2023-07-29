@@ -18,14 +18,15 @@ class MegaMenu extends Component {
 
         return <div key={i.toString()} className='container_subNav' >
                   <Link to={"categoryproducts/"+ CatList.category_name} >
-                    <div className='inner_subNav' key={i.toString()}>
 
-                        <button className="accordion child_subNav">
+                    <div  key={i.toString()}>
+
+                        <img alt='' src={CatList.category_image} className="topmenuimg"/>
                         {/* <img alt='' className='accordionMenuIcon' src={CatList.category_image} /> */}
-                        &nbsp; {CatList.category_name}
-                        </button>
+                       
 
                     </div>
+
                   </Link>
                </div>
 
